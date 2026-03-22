@@ -24,7 +24,10 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    
+    public function workspaces(){
+        return $this->hasMany(Workspace::class,'owner_id');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
