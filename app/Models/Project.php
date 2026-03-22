@@ -16,5 +16,7 @@ class Project extends Model
         return $this->belongsTo(workspace::class);
     }
 
-    
+    public function tasks(){
+        return $this->hasMany(task::class);
+    }
 }
